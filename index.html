@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Compass Bridge is the advisory practice of Danny Major: fractional product, pre-sales and customer leadership for companies building, selling or adopting AI agents and automation.">
+<link rel="canonical" href="https://compass-bridge.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://compass-bridge.com/">
+<meta property="og:title" content="Compass Bridge | Fractional product, pre-sales and customer leadership">
+<meta property="og:description" content="Compass Bridge is the advisory practice of Danny Major: fractional product, pre-sales and customer leadership for companies building, selling or adopting AI agents and automation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B2545'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='15' fill='%23fff'%3ECB%3C/text%3E%3C/svg%3E">
+<title>Compass Bridge | Fractional product, pre-sales and customer leadership</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+<style>
+/* Layout: corporate membership/vendor-site conventions. Utility bar, white header with
+   pill call to action, inset navy hero panel, affiliations strip, alternating bands,
+   multi-column dark footer. Single light theme by design, like the sites it follows. */
+:root {
+  --white: #FFFFFF;
+  --navy: #0B2545;
+  --navy-deep: #071A31;
+  --blue: #134A7C;
+  --pale: #F4F8FC;
+  --grey: #F1F1F1;
+  --ink: #1D2530;
+  --muted: #515C69;
+  --line: #D5DBE2;
+  --accent: #C4521A;
+  --accent-dark: #A04011;
+  --on-dark: #FFFFFF;
+  --on-dark-muted: #C6D2E0;
+  --font: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 5.5rem; }
+body {
+  margin: 0; background: var(--white); color: var(--ink);
+  font-family: var(--font); font-size: 1.0625rem; line-height: 1.6;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--navy);
+}
+h1, h2, h3 { margin: 0; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 4.6vw, 3rem); font-weight: 900; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 700; color: var(--navy); }
+h3 { font-size: 1.25rem; font-weight: 700; color: var(--navy); }
+p { margin: 0; }
+a { color: var(--blue); text-underline-offset: 3px; }
+a:hover { color: var(--accent-dark); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.wrap {
+  max-width: 72rem; margin-inline: auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.skip {
+  position: absolute; left: -999px; top: 0; z-index: 20;
+  background: var(--white); color: var(--navy); padding: 0.75rem 1rem; font-weight: 700;
+}
+.skip:focus { left: max(20px, env(safe-area-inset-left, 0px)); top: calc(env(safe-area-inset-top, 0px) + 8px); }
+
+/* Utility bar */
+.utility { background: var(--navy); color: var(--on-dark); font-size: 0.875rem; }
+.utility .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 2rem; padding-block: 0.5rem; }
+.utility a { color: var(--on-dark); }
+
+/* Header */
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
+  background: var(--white); border-bottom: 1px solid var(--line);
+}
+.site-head .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 2rem; padding-block: 0.75rem; }
+.wordmark { font-weight: 900; font-size: 1.3rem; color: var(--navy); text-decoration: none; letter-spacing: -0.01em; margin-right: auto; }
+.wordmark span { color: var(--accent); }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1.75rem; list-style: none; margin: 0; padding: 0; }
+.site-nav a { display: inline-block; padding-block: 0.6rem; font-size: 1rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+.site-nav a:hover { color: var(--accent-dark); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 46px;
+  padding: 0.7rem 1.5rem; border-radius: 999px; border: 2px solid var(--accent);
+  background: var(--accent); color: var(--white); font: inherit; font-weight: 700;
+  text-decoration: none; cursor: pointer;
+}
+.btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: var(--white); }
+.btn.ghost { background: transparent; border-color: var(--white); color: var(--white); }
+.btn.ghost:hover { background: var(--white); color: var(--navy); }
+.btn.outline { background: transparent; border-color: var(--navy); color: var(--navy); }
+.btn.outline:hover { background: var(--navy); color: var(--white); }
+.btn.small { min-height: 44px; padding: 0.5rem 1.25rem; }
+
+/* Hero panel */
+.hero { padding-block: 1.5rem 0; }
+.hero-panel {
+  background: var(--navy); color: var(--on-dark); border-radius: 20px;
+  padding: clamp(2rem, 6vw, 4.5rem); display: grid; gap: 1.5rem;
+}
+.hero-panel h1 { color: var(--on-dark); max-width: 48rem; }
+.hero-panel p { font-size: 1.2rem; max-width: 44rem; color: var(--on-dark-muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+
+/* Affiliations strip */
+.strip { padding-block: 2.5rem; text-align: center; }
+.strip h2 { font-size: 1.125rem; color: var(--ink); margin-bottom: 1.25rem; }
+.strip ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem 2.75rem; list-style: none; margin: 0; padding: 0; }
+.strip li { font-weight: 700; color: var(--muted); }
+
+/* Bands */
+.band { padding-block: 4rem; }
+.band.pale { background: var(--pale); }
+.band.grey { background: var(--grey); }
+.band.navy { background: var(--navy); color: var(--on-dark); }
+.band.navy h2, .band.navy h3 { color: var(--on-dark); }
+.band.navy p, .band.navy li { color: var(--on-dark-muted); }
+.intro { display: grid; gap: 0.75rem; max-width: 46rem; margin-bottom: 2.25rem; }
+.intro p { color: var(--muted); font-size: 1.125rem; }
+.band.navy .intro p { color: var(--on-dark-muted); }
+
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+.cards li {
+  display: flex; flex-direction: column; gap: 0.9rem; min-width: 0;
+  background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: 1.75rem;
+}
+.cards p { color: var(--muted); }
+.cards a { margin-top: auto; font-weight: 700; }
+
+.three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; }
+.three > div { display: grid; gap: 0.6rem; align-content: start; min-width: 0; }
+.three p { color: var(--muted); }
+
+/* Experience */
+.path { margin: 0 0 2.75rem; }
+.path figcaption { font-weight: 700; color: var(--muted); margin-bottom: 1rem; }
+.functions { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.functions::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: var(--navy); }
+.functions li { position: relative; display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 4rem; padding: 0.75rem 0.5rem; text-align: center; font-weight: 700; color: var(--white); background: var(--navy); border: 2px solid var(--navy); border-radius: 4px; }
+.history { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.history li {
+  display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 0.25rem 2rem;
+  padding-block: 1.4rem; border-bottom: 1px solid var(--line);
+}
+.history .years { font-weight: 700; color: var(--accent-dark); font-variant-numeric: tabular-nums; }
+.history .org { color: var(--muted); }
+.history p { color: var(--muted); }
+.history div { display: grid; gap: 0.2rem; min-width: 0; }
+
+.split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 3rem; align-items: start; }
+.topics { margin: 0; padding-left: 1.25rem; display: grid; gap: 0.6rem; font-size: 1.125rem; }
+.band.navy .topics li { color: var(--on-dark); }
+
+.stack { display: grid; min-width: 0; }
+.stack > div { display: grid; gap: 0.3rem; padding-block: 1.2rem; border-top: 1px solid var(--line); }
+.stack > div:last-child { border-bottom: 1px solid var(--line); }
+.stack p { color: var(--muted); }
+.stack.wide > div { grid-template-columns: 16rem minmax(0, 1fr); gap: 0.3rem 2rem; }
+.next { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.4rem; color: var(--ink); }
+.next li::marker { font-weight: 700; color: var(--accent-dark); }
+
+/* Contact */
+.contact-panel {
+  background: var(--white); border: 1px solid var(--line); border-radius: 4px;
+  padding: 1.75rem; display: grid; gap: 1.1rem; min-width: 0;
+}
+.email { font-size: 1.2rem; font-weight: 700; overflow-wrap: anywhere; user-select: all; }
+.status { color: var(--muted); font-size: 0.9375rem; min-height: 1.5rem; }
+
+/* Footer */
+footer { background: var(--navy-deep); color: var(--on-dark-muted); font-size: 0.9688rem; }
+footer .cols { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; padding-block: 3rem; }
+footer h2 { font-size: 1rem; color: var(--on-dark); margin-bottom: 0.75rem; }
+footer .wordmark { color: var(--on-dark); display: inline-block; margin-bottom: 0.75rem; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+footer a { color: var(--on-dark-muted); }
+footer a:hover { color: var(--on-dark); }
+footer .legal { border-top: 1px solid rgba(255,255,255,0.15); padding-block: 1.25rem; font-size: 0.875rem; }
+
+@media (max-width: 860px) {
+  .band { padding-block: 3rem; }
+  .cards, .three, .split, footer .cols { grid-template-columns: minmax(0, 1fr); }
+  .three { gap: 1.75rem; }
+  .functions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .functions::before { display: none; }
+  .stack.wide > div { grid-template-columns: minmax(0, 1fr); }
+  .site-nav ul { gap: 0 1.25rem; }
+  .hero-panel { border-radius: 14px; }
+  .site-head { position: static; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="utility">
+  <div class="wrap">
+    <span>Fractional leadership and advisory for AI and automation</span>
+    <a href="mailto:danny.major@compass-bridge.com">danny.major@compass-bridge.com</a>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="#main">Compass<span> Bridge</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#speaking">Speaking</a></li>
+      </ul>
+    </nav>
+    <a class="btn small" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-panel">
+        <h1>Fractional product, pre-sales and customer leadership</h1>
+        <p>Compass Bridge is the advisory practice of Danny Major. I help companies build, sell and adopt AI agents and automation, in enterprise and regulated industries.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Talk to Danny</a>
+          <a class="btn ghost" href="#services">Explore services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap">
+      <h2>Professional affiliations</h2>
+      <ul>
+        <li>Fellow of BCS, The Chartered Institute for IT</li>
+        <li>BCS ITNOW columnist</li>
+        <li>Insurtech UK Advisory Council</li>
+        <li>IEEE standards working group, former Secretary</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="band pale" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="intro">
+        <h2 id="services-h">Services</h2>
+        <p>Three ways I work with clients, each on a fractional basis.</p>
+      </div>
+      <ul class="cards">
+        <li>
+          <h3>Product and market leadership</h3>
+          <p>Deciding what to build or buy next is hard when the market moves this fast. I advise product teams, insurers and investors on where AI agents and automation fit, what to build or buy next, and what it takes to run them in a regulated environment.</p>
+          <a href="#contact">Ask about product and market leadership</a>
+        </li>
+        <li>
+          <h3>Pre-sales and solutions leadership</h3>
+          <p>Deals stall between a good demo and a buyer who can explain the value internally. I tie the product to a measurable outcome, shape proposals and statements of work, and scope pilots that prove the case.</p>
+          <a href="#contact">Ask about pre-sales and solutions leadership</a>
+        </li>
+        <li>
+          <h3>Customer leadership</h3>
+          <p>Founder-led customer management stops working as the customer list grows. I lead customer success, delivery and account growth, set up how customers are onboarded, measured and retained, and step in on the accounts that matter most.</p>
+          <a href="#contact">Ask about customer leadership</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="clients" aria-labelledby="clients-h">
+    <div class="wrap split">
+      <div class="intro" style="margin-bottom:0">
+        <h2 id="clients-h">Who I work with</h2>
+        <p>Most clients come to me at one of three points: they are building AI, selling it, or buying it.</p>
+      </div>
+      <div class="stack">
+        <div>
+          <h3>AI and automation vendors</h3>
+          <p>Software companies that need senior product, pre-sales or customer leadership before a full-time hire makes sense.</p>
+        </div>
+        <div>
+          <h3>Insurers and enterprises</h3>
+          <p>Organisations adopting AI agents that want someone who has delivered them to test the plan and the suppliers.</p>
+        </div>
+        <div>
+          <h3>Investors and boards</h3>
+          <p>Funds and boards that need an informed view of a product, a market or a team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band grey" id="expertise" aria-labelledby="expertise-h">
+    <div class="wrap">
+      <div class="intro">
+        <h2 id="expertise-h">Expertise</h2>
+        <p>I advise on what I have done.</p>
+      </div>
+      <div class="three">
+        <div>
+          <h3>Insurance</h3>
+          <p>I know what AI agents and automation change across the insurance lifecycle, from live work with insurers, brokers, MGAs and the platforms they run on.</p>
+        </div>
+        <div>
+          <h3>Agentic AI</h3>
+          <p>I deploy agents where regulation, customer data and brand all matter. I know what works, what fails after the demo, and how to measure the return.</p>
+        </div>
+        <div>
+          <h3>Automation</h3>
+          <p>I built intelligent automation products as a vendor CTO and head of product. The lessons from that wave apply directly to AI agents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="experience" aria-labelledby="experience-h">
+    <div class="wrap">
+      <div class="intro">
+        <h2 id="experience-h">Experience</h2>
+        <p>More than 15 years leading technology, product and customer teams in enterprise software, through two waves: intelligent automation and AI agents.</p>
+      </div>
+      <figure class="path">
+        <figcaption>Functions I have led</figcaption>
+        <ol class="functions">
+          <li>Services</li>
+          <li>Operations</li>
+          <li>Technology</li>
+          <li>Customer support</li>
+          <li>Product</li>
+          <li>Customer</li>
+        </ol>
+      </figure>
+      <div class="stack wide">
+        <div>
+          <h3>Inside the vendor</h3>
+          <p>I have been CTO, COO, head of product and Chief Customer Officer at automation and AI software companies. I know how these products are built, sold and supported.</p>
+        </div>
+        <div>
+          <h3>Growth to acquisition</h3>
+          <p>As COO and then CTO, I saw an automation company through growth and acquisition. I then ran cloud technology, global support and product for the acquirer.</p>
+        </div>
+        <div>
+          <h3>Regulated customers</h3>
+          <p>My customers are enterprises and insurers. They adopt only with governance, security and measurable results in place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band navy" id="speaking" aria-labelledby="speaking-h">
+    <div class="wrap split">
+      <div class="intro" style="margin-bottom:0">
+        <h2 id="speaking-h">Writing and speaking</h2>
+        <p>I write a regular column for BCS ITNOW and speak at industry events, webinars and roundtables. I join panels, give talks and brief leadership teams.</p>
+        <div class="actions" style="margin-top:0.75rem">
+          <a class="btn ghost" href="#contact">Invite Danny to speak</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:1rem">Topics</h3>
+        <ul class="topics">
+          <li>Why AI projects stall after the demo</li>
+          <li>AI agents in regulated customer journeys</li>
+          <li>What the last automation wave teaches this one</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band pale" id="contact" aria-labelledby="contact-h">
+    <div class="wrap split">
+      <div class="intro" style="margin-bottom:0">
+        <h2 id="contact-h">Get in touch</h2>
+        <p>Tell me what you sell or want to adopt, and where it is stuck. I take on a small number of clients at a time.</p>
+        <h3>What happens next</h3>
+        <ol class="next">
+          <li>You send me a short note</li>
+          <li>We have an introductory call</li>
+          <li>We agree the approach and how success will be measured</li>
+        </ol>
+      </div>
+      <div class="contact-panel">
+        <h3>Danny Major</h3>
+        <a class="email" id="email" href="mailto:danny.major@compass-bridge.com">danny.major@compass-bridge.com</a>
+        <div class="actions">
+          <button class="btn outline small" id="copy-email" type="button">Copy email address</button>
+        </div>
+        <a href="https://www.linkedin.com/in/danny-major-75750b1a" target="_blank" rel="noopener">Connect on LinkedIn (opens in a new tab)</a>
+        <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <span class="wordmark">Compass Bridge</span>
+        <p>Fractional product, pre-sales and customer leadership for companies building, selling or adopting AI agents and automation.</p>
+      </div>
+      <div>
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#clients">Who I work with</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#speaking">Writing and speaking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:danny.major@compass-bridge.com">danny.major@compass-bridge.com</a></li>
+          <li><a href="https://www.linkedin.com/in/danny-major-75750b1a" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">&copy; 2026 Compass Bridge. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var email = document.getElementById('email');
+  var status = document.getElementById('copy-status');
+  if (!btn || !email) return;
+  function selectIt() {
+    var r = document.createRange();
+    r.selectNodeContents(email);
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
+    status.textContent = 'Address selected, ready to copy.';
+  }
+  btn.addEventListener('click', function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email.textContent).then(function () {
+        status.textContent = 'Email address copied.';
+      }, selectIt);
+    } else {
+      selectIt();
+    }
+  });
+})();
+</script>
+</body>
+</html>
